@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+            <input  placeholder="Enter Name :"/>
+            <button onclick=getDataFun()>Get Roster</button>
+    </div>
+    <div class="container">
+        <div class="wrapper">
+
+        </div>
+    </div>
+    <script id="template" type="text/x-handlebars-template">
+        {{#each dataArray}}
+            <div class="ShowClass">
+                <p>{{firstName}} {{lastName}}</p>
+                <img src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}">
+                <p>{{jersey}}</p>
+                <p>{{pos}}</p>
+            </div>
+        {{/each}}
+    </script>
+
+    </div>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="render.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
